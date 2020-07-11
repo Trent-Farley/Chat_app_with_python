@@ -10,7 +10,7 @@ python -u main.py ```
 
 #### You should have something like this: 
 
-![Photo of chat app working](./Websocket_demo.jpg)
+![Photo of chat app working](https://github.com/Trent-Farley/Chat_app_with_python/blob/master/Websocket_demo.JPG)
 
 #### You can open up multiple tabs that all can communicate with each other in real time!
 #### This requires no packet headers when the client and server have decided to upgrade. Websockets are great for increasing the speed that packets can be sent and received as well as being very secure. WIth browser support for almost every browser, it is certainly where the internet is heading. 
