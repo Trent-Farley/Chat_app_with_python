@@ -4,14 +4,15 @@ from flask_socketio import SocketIO
 
 @app.route('/', methods=['GET', 'POST'])
 def sessions():
-    return render_template('session.html')
+    return render_template('index.html') #Flask auto looks in the /templates folder, this is 
+    #Where this template is.
 
 @app.route('/', methods=['GET', 'POST'])
 def messageReceived(methods=['GET', 'POST']):
-    print('message was received!!!')
+    print('Callback hit, this would typically be used for processing\n\
+        but I don\'t have anything to process')
 
 @socketio.on('my event')
 def handle_event(json, methods=['GET', 'POST']):
-    print('received my event: ' + str(json))
     socketio.emit('my response', json, callback=messageReceived)
 
